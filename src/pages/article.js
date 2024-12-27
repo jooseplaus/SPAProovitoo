@@ -28,7 +28,7 @@ function Article() {
     }, [])
 
     if (loading) return <div style={{height:"100vh"}}><img style={{width: "100%", height:"100px"}} src={Loader}/></div> 
-    if (error) return <h1 style={{width: "100%", textAlign:"center", fontFamily:"BoosterNextFY, sans-serif", color:"white"}}>Midagi läks valesti...</h1>
+    if (error) return <div style={{height:"100vh"}}><h1 style={{width: "100%", textAlign:"center", fontFamily:"BoosterNextFY, sans-serif", color:"white"}}>Midagi läks valesti...</h1></div>
 
     const paragraphs = data.body.split(/<\/p>/).map((paragraph, index) => (
         <p style={{margin: "40px 0px"}} key={index} dangerouslySetInnerHTML={{__html: paragraph + "</p>"}}/>

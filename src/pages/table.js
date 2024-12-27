@@ -100,19 +100,19 @@ useEffect(() => {
     }
 
     const getBirthdateForSorting = (personalCode) => {
-        if (!personalCode) return new Date(0); // Kui isikukood puudub, tagasta varaseim kuupäev
+        if (!personalCode) return new Date(0); 
         const code = String(personalCode);
         const firstDigit = parseInt(code[0], 10);
         const century = firstDigit <= 2 ? 1800 : firstDigit <= 4 ? 1900 : 2000;
         const year = century + parseInt(code.substring(1, 3), 10);
-        const month = parseInt(code.substring(3, 5), 10) - 1; // Kuud on vahemikus 0-11
+        const month = parseInt(code.substring(3, 5), 10) - 1;
         const day = parseInt(code.substring(5, 7), 10);
         return new Date(year, month, day);
     };
     
 
     const getBirthdate = (personalCode) => {
-        if (!personalCode) return ""; // Kui isikukood puudub, tagasta tühi string
+        if (!personalCode) return ""; 
         const code = String(personalCode);
         const firstDigit = parseInt(code[0], 10);
         const century = firstDigit <= 2 ? 1800 : firstDigit <= 4 ? 1900 : 2000;
