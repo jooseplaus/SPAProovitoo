@@ -1,0 +1,145 @@
+.table-section {
+    margin: 20px auto;
+}
+
+.table-h1 {
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-size: 25px;
+    font-family: 'BoosterNextFY', sans-serif;
+    text-transform: uppercase;
+}
+
+.table-data {
+    padding: 10px 16px;
+    color: white;
+    border-top: 1px solid white;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.table-heading {
+    padding: 10px 16px;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+    font-family: 'BoosterNextFY-300', sans-serif;
+    font-weight: 500;
+}
+
+.table-data-row {
+    border-top: 1px solid white;
+}
+
+
+.table-data-row.open-row .table-data {
+    background-color: white;
+    color: #333333 !important;
+}
+
+.pag-div {
+    padding-top: 15px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.pag-section {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+}
+
+.table th, .table td {
+    width: 200px;
+    text-align: left;
+    word-wrap: break-word;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.table .head-row {
+    background-color: #333333;
+    font-size: 16px;
+    color: white;
+}
+
+.expanded-row {
+    background-color: white;
+    color: black;
+    display: table-row;
+}
+
+.expanded-div {
+    display: flex;
+    padding: 10px 16px;
+}
+
+.expanded-text-div {
+    padding-left: 16px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.table-data-row:nth-child(even) {
+    background-color: #FFFFFF1A ;
+}
+
+.sortable-header {
+    all: unset; 
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+}
+
+
+.sortable-header i {
+    color: #fff;
+}
+
+.pag-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 50%;
+    font-family: 'BoosterNextFY', sans-serif;
+    font-size: 16px;
+}
+
+.pag-button:hover {
+    border: 1px solid white;
+}
+
+.pag-button.active {
+    background-color: white;
+    color: #3a3d57;
+}
+
+.pag-button:disabled {
+    color: gray;
+}
+
+@media (max-width: 860px) {
+    .table-wrapper{
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .table {
+        width: 1000px;
+    }
+    .table-heading {
+        padding: 6px 8px;
+        width: auto;
+    }
+    .table-data {
+        padding: 6px 8px;
+    }
+}
