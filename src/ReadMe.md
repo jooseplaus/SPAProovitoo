@@ -1,9 +1,10 @@
 TRINIDAD WISEMAN SPA PROOVITÖÖ 
 
 Käivitamine: 
-
-1 npm install
-2 npm start 
+git clone https://github.com/jooseplaus/SPAProovitoo
+cd SPAProovitoo
+npm install
+npm start 
 
 
 
