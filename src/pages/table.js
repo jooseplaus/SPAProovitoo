@@ -8,12 +8,12 @@ function Table () {
 
     const [data, setData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const rowsPerPage = 10
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const [originalData, setOriginalData] = useState([])
     const [filteredData, setFilteredData] = useState([])
     const [openRows, setOpenRows] = useState({})
+    
 
     const [sortStates, setSortStates] = useState ({
         firstname: "default",
@@ -89,8 +89,11 @@ useEffect(() => {
         setFilteredData(sortedData);
     };
     
-
+    const rowsPerPage = 10
     const maxPageButtons = 5
+    const indexOfLastRow = currentPage * rowsPerPage;
+    const indexOfFirstRow = indexOfLastRow - rowsPerPage;
+    const currentRows = filteredData.slice(indexOfFirstRow, indexOfLastRow)
 
     const getPageRange = () => {
         const totalPages = Math.ceil(data.length / rowsPerPage)
@@ -98,6 +101,12 @@ useEffect(() => {
         const end = Math.min(start + maxPageButtons - 1, totalPages)
         return Array.from({length: end - start + 1}, (_, i) => start + i)
     }
+
+    const toggleRow = (id) => {
+        setOpenRows((prev) => ({
+            [id]: !prev[id] 
+        }));
+    };
 
     const getBirthdateForSorting = (personalCode) => {
         if (!personalCode) return new Date(0); 
@@ -134,22 +143,12 @@ useEffect(() => {
     }
         
 
-    const indexOfLastRow = currentPage * rowsPerPage;
-    const indexOfFirstRow = indexOfLastRow - rowsPerPage;
-    const currentRows = filteredData.slice(indexOfFirstRow, indexOfLastRow)
-
-    const toggleRow = (id) => {
-        setOpenRows((prev) => ({
-            [id]: !prev[id] 
-        }));
-    };
-
 
 
     return(
         <div style={{height:"100vh"}}>
         <div className="table-h1">
-            <h1>Nimekiri</h1>
+            <h1 className="h1-t">Nimekiri</h1>
         </div>
         <div className="table-section">
             <div className="table-wrapper">

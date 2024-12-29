@@ -127,13 +127,13 @@
     color: gray;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 960px) {
     .table-wrapper{
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
     .table {
-        width: 1000px;
+        width: auto;
     }
     .table-heading {
         padding: 6px 8px;
@@ -141,5 +141,23 @@
     }
     .table-data {
         padding: 6px 8px;
+        font-size: 14px;
+        width: 100px;
+    }
+    .pag-div {
+        width: 100%;
+        justify-content: center;
+    }
+    .pag-button{
+        width: 24px;
+        height: 24px;
+    }
+    .table th, .table td {
+        text-align: left;
+        white-space: nowrap;
+    }
+    .h1-t {
+        font-size: 36px;
+        margin: 0px 0px 24px;
     }
 }

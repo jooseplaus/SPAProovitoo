@@ -38,6 +38,9 @@
 .corner-img.left {
   bottom: 0;
   left: 0;
+  height: 300px;
+  width: auto;
+  
 }
 
 .corner-img.right {
@@ -69,6 +72,9 @@
 
 .content-div {
   width: auto;
+  padding: 124px 24px 80px;
 }
+
+
 
 }
