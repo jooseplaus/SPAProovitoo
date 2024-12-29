@@ -246,6 +246,7 @@ useEffect(() => {
                                     <div className="expanded-text-div">
                                         
                                         <div
+                                            className="expanded-text"
                                             dangerouslySetInnerHTML={{
                                                 __html: person.body.split("\n") [0],
                                             }}

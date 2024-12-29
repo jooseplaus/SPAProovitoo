@@ -160,4 +160,16 @@
         font-size: 36px;
         margin: 0px 0px 24px;
     }
+    .expanded-div{
+        width: auto;
+        padding: 6px 8px;
+    }
+    .expanded-row {
+        width: auto;
+    }
+    .expanded-text {
+        width: 100%;
+        text-wrap: wrap;
+        font-size: 14px;
+    }
 }
